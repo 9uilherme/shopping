@@ -11,7 +11,6 @@ function App() {
     // hook para criacao de estado
     // const [lettuce, setLettuce] = useState(false)
     const [products, setProducts] = useState(productsMock.products)
-    const [healthy, setHealthy] = useState(10)
     const [selectedProducts, setSelectedProducts] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
 
@@ -47,14 +46,6 @@ function App() {
         // console.log(id, checked, name)
         setProducts(newProducts)
     }
-
-
-    // callback, sera chamado no momento da criacao do componete
-    useEffect(function() {
-        setTimeout(() => {
-            setHealthy(100)
-        }, 5000)
-    }, [])
 
     return <Wrapper>
         <Container>
